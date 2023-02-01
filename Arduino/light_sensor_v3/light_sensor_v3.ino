@@ -25,28 +25,28 @@ void loop() {
 
 
     
-  else if (analogValue1 < 1000){
+  else if (analogValue1 < 800){
     Serial.println("2");
   }
   
 
-  else if (analogValue2 < 1000){
+  else if (analogValue2 < 800){
     Serial.println("3");
   }
 
 
     
-  else if (analogValue3 < 1000){
+  else if (analogValue3 < 800){
     Serial.println("4");
   }
   
-  else if (analogValue4 < 1000){
+  else if (analogValue4 < 800){
     Serial.println("5");
   }
 
 
     
-  else if (analogValue5 < 1000){
+  else if (analogValue5 < 800){
     Serial.println("6");
   }
 
