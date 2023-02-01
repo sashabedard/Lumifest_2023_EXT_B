@@ -13,44 +13,43 @@ void loop() {
 
   int analogValue2 = analogRead(A2);
 
-  int analogValue3 = analogRead(A3);
-  
-  int analogValue4 = analogRead(A4);
+//  int analogValue3 = analogRead(A3);
+//  
+//  int analogValue4 = analogRead(A4);
+//
+//  int analogValue5 = analogRead(A5);
+//  
 
-  int analogValue5 = analogRead(A5);
-
-   if (analogValue0 < 1000){
+   if (analogValue0 < 800){
     Serial.println("1");
   }
 
 
     
-  else if (analogValue1 < 800){
+   else if (analogValue1 < 800){
     Serial.println("2");
   }
-  
+
 
   else if (analogValue2 < 800){
-    Serial.println("3");
-  }
+  Serial.println("3");
+ }
 
-
-    
-  else if (analogValue3 < 800){
-    Serial.println("4");
-  }
+// else if (analogValue3 < 800){
+//    Serial.println("4");
+//  }
   
-  else if (analogValue4 < 800){
-    Serial.println("5");
-  }
-
-
-    
-  else if (analogValue5 < 800){
-    Serial.println("6");
-  }
+// if (analogValue4 < 800){
+//    Serial.println("5");
+//  }
+//
+//
+//    
+//  if (analogValue5 < 800){
+//    Serial.println("6");
+//  }
 
   else {
-     Serial.println("9");
+     Serial.println("0");
      }
 }
