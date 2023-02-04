@@ -11,7 +11,7 @@ void loop() {
 
   int analogValue1 = analogRead(A1);
 
-  int analogValue2 = analogRead(A2);
+  //int analogValue2 = analogRead(A2);
 
 //  int analogValue3 = analogRead(A3);
 //  
@@ -27,13 +27,13 @@ void loop() {
 
     
    else if (analogValue1 < 800){
-    Serial.println("2");
+    Serial.println("5");
   }
 
 
-  else if (analogValue2 < 800){
-  Serial.println("3");
- }
+//   else if (analogValue2 < 800){
+//   Serial.println("3");
+//  }
 
 // else if (analogValue3 < 800){
 //    Serial.println("4");
