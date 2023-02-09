@@ -1,55 +1,93 @@
-
 void setup() {
   // initialize serial communication at 9600 bits per second:
   Serial.begin(9600);
 }
 
+ int SensorValue1 = analogRead(A0);
+    int SensorValue2 = analogRead(A1);
+      int SensorValue3 = analogRead(A2);
+        int SensorValue4 = analogRead(A3);
+          int SensorValue5 = analogRead(A4);
+            int SensorValue6 = analogRead(A5);
+
+ int value0 = "";
+   int value1 = "";
+      int value2 = "";
+        int value3 = "";
+          int value4 = "";
+            int value5 = "";
+              int value6 = "";
+
+
 void loop() {
-   
-  // reads the input on analog pin A0 (value between 0 and 1023)
-  int analogValue0 = analogRead(A0);
 
-  int analogValue1 = analogRead(A1);
+  if (SensorValue1 <= 800){
+        value1 = "1";  
+      }
 
-  //int analogValue2 = analogRead(A2);
+    if (SensorValue2 <= 800){
+          value2 = "2";  
+      }
 
-//  int analogValue3 = analogRead(A3);
-//  
-//  int analogValue4 = analogRead(A4);
-//
-//  int analogValue5 = analogRead(A5);
-//  
+        if (SensorValue3 <= 800){
+             value2 = "2"; 
+        }
 
-   if (analogValue0 < 800){
-    Serial.println("1");
-  }
-
-
-    
-   else if (analogValue1 < 800){
-    Serial.println("5");
-  }
-
-
-//   else if (analogValue2 < 800){
-//   Serial.println("3");
-//  }
-
-// else if (analogValue3 < 800){
-//    Serial.println("4");
-//  }
+            if (SensorValue4 <= 800){
+                 value4 = "4"; 
+            }
   
-// if (analogValue4 < 800){
-//    Serial.println("5");
-//  }
-//
-//
-//    
-//  if (analogValue5 < 800){
-//    Serial.println("6");
-//  }
+                  if (SensorValue5 <= 800){
+                       value5 = "5"; 
+                  }
 
-  else {
-     Serial.println("0");
-     }
+                      if (SensorValue6 <= 800){
+                            value6 = "6"; 
+                      }
+
+
+// If the laser is still colliding
+ else if (SensorValue1 > 800){
+    value1 = value0;     
+ }
+
+    else if (SensorValue2 > 800){
+        value2 = value0; 
+    }
+
+        else if (SensorValue3 > 800){
+            value3 = value0; 
+        }
+
+            else if (SensorValue4 > 800){
+                value4 = value0; 
+            }
+
+                else if (SensorValue5 > 800){
+                    value5 = value0; 
+                }
+
+                    else if (SensorValue6 > 800){
+                        value6 = value0; 
+                    }
+
+print();
+}
+
+void print(){
+// If the laser is blocked by the user.
+ Serial.print(value1);
+    Serial.print(" ");
+ Serial.print(value2);
+    Serial.print(" ");
+ Serial.print(value3);
+    Serial.print(" ");
+ Serial.print(value4);
+    Serial.print(" ");
+ Serial.print(value5);
+    Serial.print(" ");
+ Serial.println(value6);
+
+ delay(10);
+
 }
