@@ -1,18 +1,25 @@
 void setup() {
-
  Serial.begin(9600);
 } 
 
 int value1 = 0;
-int value2 = 1;
+int value2 = 0;
 int value3 = 0;
-int value4 = 1;
+int value4 = 0;
 int value5 = 0;
-int value6 = 1;
+int value6 = 0;
 
 void loop() {
 
- if (analogRead(A0) < 800){
+ if (analogRead(A4) < 800){
+      value5 = 1;
+  }
+  
+else{
+   value5 = 0 ;
+}
+
+if (analogRead(A0) < 800){
       value1 = 1;
   }
 
